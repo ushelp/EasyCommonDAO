@@ -19,7 +19,7 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 ## 特点
 
-1. 提供基于 **Hibernate Native APIs ** 和 **Java Persistence API (JPA)** (`Hiberante`， `EclipseLink`) 的通用 DAO 实现
+1. 提供基于 **Hibernate Native APIs** 和 **Java Persistence API (JPA)** (`Hiberante`， `EclipseLink`) 的通用 DAO 实现
 
 2. 消灭 DAO 层接口定义和实现
 

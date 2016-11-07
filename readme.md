@@ -23,7 +23,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 - **中文**
 
- 1. 提供基于 **Hibernate Native APIs ** 和 **Java Persistence API (JPA)** (`Hiberante`， `EclipseLink`) 的通用 DAO 实现
+ 1. 提供基于 **Hibernate Native APIs** 和 **Java Persistence API (JPA)** (`Hiberante`， `EclipseLink`) 的通用 DAO 实现
  
  2. 消灭 DAO 层接口定义和实现
  
@@ -54,7 +54,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 ## EasyCommonDAO Architecture
 
 
-![EasyCommonDAO](images/Architecture.png)
+![EasyCommonDAO](doc/images/Architecture.png)
 
 
 
