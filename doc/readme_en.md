@@ -4,9 +4,9 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Latest Version
 
-- Least version:  `EasyCommonDAO-1.1.0-RELEASE`
+- Least version:  `EasyCommonDAO-1.2.0-RELEASE`
 
-- ORM test version: 
+- Test enviroment:
 
  ```
  Hibernate 5.2.4(JPA 2.1)
@@ -65,7 +65,7 @@ Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO inte
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.1.0-RELEASE</version>
+    <version>1.2.0-RELEASE</version>
 </dependency> 
 ```
 
@@ -170,41 +170,44 @@ Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO inte
  * @param sql SQL
  * @param values values
  */
-public void batchUpdateSQL(final String sql, final Object[] values);
+public void batchUpdateSQL(String sql, Object[] values);
 /**
  * SQL Batch
  * @param sql SQL
  * @param values values
  */
-public void batchUpdateSQL(final String sql, final Object[][] values);
+public void batchUpdateSQL(String sql, Object[][] values);
+
 /**
- * delete
+ * Remove persists object
+ * 
  * @param cls Class
  * @param id OID
  */
-public void delete(Class cls, Serializable id);
-/**
- * delete Obejct
- * @param o Entity
- */
-public void delete(Object o);
+public void remove(Class cls, Serializable id);
 
 /**
- * Batch delete(non cascade)
+ *Remove persists object
+ * 
+ * @param o Persists object
+ */
+public void remove(Object o);
+/**
+ * Batch delete by query statement(not support cascade)
  * @param cls Class
  * @param fieldName fieldName
  * @param values values
  * @return affected rows count
  */
- public Integer deleteByValues(Class cls, String fieldName, String[] values);
+ public Integer deleteByValues(Class cls, String fieldName, Object[] values);
  
  /**
-  * Batch delete for cascade
+  * Batch delete by query statement(support cascade)
   * @param cls Class
   * @param Field Name
   * @param Values
   */
- public void deleteCascadeByValues(Class cls, String fieldName, String[] values);
+ public void deleteCascadeByValues(Class cls, String fieldName, Object[] values);
  
 /**
  * Clear second cache

@@ -5,9 +5,9 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 ## 版本 
 
-- Least version:  `EasyCommonDAO-1.1.0-RELEASE`
+- Least version:  `EasyCommonDAO-1.2.0-RELEASE`
 
-- ORM test version: 
+- Test enviroment: 
 
  ```
  Hibernate 5.2.4(JPA 2.1)
@@ -67,7 +67,7 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.1.0-RELEASE</version>
+    <version>1.2.0-RELEASE</version>
 </dependency> 
 ```
 
@@ -167,41 +167,43 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
  * @param sql SQL语句
  * @param values 单参数语句值列表
  */
-public void batchUpdateSQL(final String sql, final Object[] values);
+public void batchUpdateSQL(String sql, Object[] values);
 /**
  * 使用JDBC执行原生的批量SQL，多参数语句值列表
  * @param sql SQL语句
  * @param values 多参数语句值列表
  */
-public void batchUpdateSQL(final String sql, final Object[][] values);
-
+public void batchUpdateSQL(String sql, Object[][] values);
 
 /**
- * 删除
+ * 删除持久对象
+ * 
  * @param cls 类型
  * @param id OID
  */
-public void delete(Class cls, Serializable id);
+public void remove(Class cls, Serializable id);
+
 /**
- * 删除对象
+ * 删除持久对象
+ * 
  * @param o 实体对象
  */
-public void delete(Object o);
+public void remove(Object o);
 /**
- * 批量删除，对使用,分隔的列表执行删除
+ * 使用 Query 语句批量删除，不支持级联
  * @param cls 类型ls 类型
  * @param fieldName 删除条件字段
  * @param values 语句参数值列表List 要删除的字段列表，使用,分隔
  * @return affected rows count
  */
-public Integer deleteByValues(Class cls, String fieldName, String[] values);
+public Integer deleteByValues(Class cls, String fieldName, Object[] values);
 /**
- * 带级联的批量删除，对使用,分隔的列表执行删除，deleteByValues不支持级联删除
+ * 使用 Query 语句批量删除，支持级联
  * @param cls 类型
  * @param fieldName 删除条件字段
  * @param values 集合值列表
  */
-public void deleteCascadeByValues(Class cls, String fieldName, String[] values);
+public void deleteCascadeByValues(Class cls, String fieldName, Object[] values);
  
 
 /**
