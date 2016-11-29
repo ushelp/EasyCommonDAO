@@ -4,7 +4,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Latest Version
 
-- Least version:  `EasyCommonDAO-1.2.0-RELEASE`
+- Least version:  `EasyCommonDAO-1.4.0-RELEASE`
 
 - Test enviroment:
 
@@ -13,7 +13,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
  Hibernate 4.3.11(JPA 2.1)
  Hibernate 3.6.10(JPA 2.0)
  EclipseLink 2.6.4(JPA 2.0+)
- spring 4.3.3
+ Spring 4.3.3
  ```
 
 ## Featuter
@@ -43,19 +43,22 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Technical comparison
 
-Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO interface, nor does it need to learn method naming conventions. Reduce learning costs, and truly eliminate the DAO layer to achieve.
+Compared to `Basic DAO` and `Spring Data JPA`, `EasyCommonDAO` does not need to define a DAO interface, nor does it need to learn method naming conventions. Reduce the cost of learning, and truly eliminate the DAO layer to achieve.
 
-- Basic DAO
 
- ![Basic DAO](images/BasicDAO.png)
+- **EasyCommonDAO**
 
-- Spring Data JPA
+ ![EasyCommonDAO](images/EasyCommonDAO.png)
+
+- **Spring Data JPA**
 
  ![Spring Data JPA](images/SpringDataJPA.png)
 
-- EasyCommonDAO
+- **Basic DAO**
 
- ![EasyCommonDAO](images/EasyCommonDAO.png)
+ ![Basic DAO](images/BasicDAO.png)
+
+
 
 
 
@@ -65,7 +68,7 @@ Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO inte
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.2.0-RELEASE</version>
+    <version>1.4.0-RELEASE</version>
 </dependency> 
 ```
 
@@ -159,6 +162,141 @@ Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO inte
  }
  ```
 
+
+
+
+
+
+
+## PageBean pagination
+ 
+If you use **EclipseLink**, the select statement must be specified. 
+
+- Example
+ 
+ ```JAVA
+ PageBean pb = new PageBean();
+
+ // FROM Clause; optional
+ // **If use EclipseLink is required!**
+ pb.setSelect(" select new com.company.ssh.entity.Account(ac.accountid, ac.qxname) ");
+ // FROM Clause Entity Name; rquired
+ pb.setEntityName("Account ac"); 
+ // Page Number; optional; default is 1
+ pb.setPageNo(1); 
+ // Rows per page; optional; default is 10
+ pb.setRowsPerPage(4);
+ // WHERE Clause; optional; default is ''
+ pb.setCondition(" and ac.accountid>2");
+ // Append where clause condition; optional; default is ''
+ // pb.addCondition(" and name='A'");
+ // SortName; optional; default is ''
+ pb.setSort("ac.accountid");
+ // SortOrder; optional; default is 'asc'
+ pb.setSortOrder("desc");
+ // Other sorting methods; optional; default is ''
+ pb.setLastSort(",time desc");
+
+ // Execute pagination quries
+ commonDAO.findByPage(pb); 
+ 
+ // Pagination data
+ System.out.println(pb.getData());
+ System.out.println(pb.getPageNo());
+ System.out.println(pb.getRowsPerPage());
+ System.out.println(pb.getRowsCount());
+ System.out.println(pb.getPageTotal());
+ ```
+
+- Example2
+
+ ```JAVA
+ // Immediate use this query
+ // data sql
+ pb.setQuery("select ac from Account ac where ac.accountid>=10 and ac.accountid<1000");
+// total sql
+ pb.setCountSQL("select count(1) from Account ac where ac.accountid>=10 and ac.accountid<1000"); 
+  // Page Number; optional; default is 1
+ pb.setPageNo(1); 
+ // Rows per page; optional; default is 10
+ pb.setRowsPerPage(4);
+
+ // Execute pagination quries
+ commonDAO.findByPage(pb); 
+
+ // Pagination data
+ System.out.println(pb.getData());
+ System.out.println(pb.getPageNo());
+ System.out.println(pb.getRowsPerPage());
+ System.out.println(pb.getRowsCount());
+ System.out.println(pb.getPageTotal());
+ ```
+
+
+## EasyCriteria query
+
+1. New your EasyCriteria class, must **extends EasyCriteria implements Serializable**
+
+2. Write your condition by **getCondition()**
+
+ ```JAVA
+ public class SysUserCriteria extends EasyCriteria implements java.io.Serializable {
+ 	// 1. Criteria field
+ 	private String name;
+ 	private String realName;
+ 	private Integer status; // 0 is ON; 1 is OFF; 2 is REMOVED
+ 
+ 	// 2. Constructor
+ 	public SysUserCriteria() {
+ 	}
+ 
+ 	public SysUserCriteria(String name, String realName, Integer status) {
+ 		super();
+ 		this.name = name;
+ 		this.realName = realName;
+ 		this.status = status;
+ 	}
+ 
+ 	// 3. Condition genertator abstract method implements
+ 	public String getCondition() {
+ 		values.clear(); // **Must clear old values**
+
+ 		StringBuffer condition = new StringBuffer();
+ 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
+ 			condition.append(" and name like ?");
+ 			values.add("%" + this.getName() + "%");
+ 		}
+ 		if (StringUtils.isNotNullAndEmpty(this.getRealName())) {
+ 			condition.append(" and realName like ?");
+ 			values.add("%" + this.getRealName() + "%");
+ 		}
+ 		if (StringUtils.isNotNullAndEmpty(this.getStatus())) {
+ 			condition.append(" and status=?");
+ 			values.add(this.getStatus());
+ 		}
+ 		return condition.toString();
+ 	}
+ 
+ 	// 4. Setters&amp;Getters...
+ 
+ }
+ ```
+
+3. Find by EasyCriteria
+
+ ```JAVA
+ PageBean pageBean = new PageBean();
+ pageBean.setEntityName("SysUser users");
+ pageBean.setSelect("select users");
+
+ // EasyCriteria
+ SysUserCriteria usersCriteria =new SysUserCriteria();
+ usersCriteria.setName("A");
+ usersCriteria.setStatus(0);
+ 
+ // Find by EasyCriteria
+ commonDAO.findByPage(pageBean, usersCriteria);
+ ```
 
 
 ## CommonDAO API 
@@ -531,133 +669,6 @@ public void updateByJpql(String jpql,Object... values);
 public void updateBySQL(String sql,Object...values);
 ```
 
-
-
-## PageBean pagination
- 
-If you use **EclipseLink**, the select statement must be specified. 
-
-- Example
- 
- ```JAVA
- PageBean pb = new PageBean();
-
- // FROM Clause; optional
- // **If use EclipseLink is required!**
- pb.setSelect(" select new com.company.ssh.entity.Account(ac.accountid, ac.qxname) ");
- // FROM Clause Entity Name; rquired
- pb.setEntityName("Account ac"); 
- // Page Number; optional; default is 1
- pb.setPageNo(1); 
- // Rows per page; optional; default is 10
- pb.setRowsPerPage(4);
- // WHERE Clause; optional; default is ''
- pb.setCondition(" and ac.accountid>2");
- // Append where clause condition; optional; default is ''
- // pb.addCondition(" and name='A'");
- // SortName; optional; default is ''
- pb.setSort("ac.accountid");
- // SortOrder; optional; default is 'asc'
- pb.setSortOrder("desc");
- // Other sorting methods; optional; default is ''
- pb.setLastSort(",time desc");
-
- // Execute pagination quries
- commonDAO.findByPage(pb); 
- 
- // Pagination data
- System.out.println(pb.getData());
- System.out.println(pb.getPageNo());
- System.out.println(pb.getRowsPerPage());
- System.out.println(pb.getRowsCount());
- System.out.println(pb.getPageTotal());
- ```
-
-- Example
-
- ```JAVA
- // Immediate use this query
- pb.setQuery("select ac from Account ac where ac.accountid>=10 and ac.accountid<1000");
-  // Page Number; optional; default is 1
- pb.setPageNo(1); 
- // Rows per page; optional; default is 10
- pb.setRowsPerPage(4);
-
- // Execute pagination quries
- commonDAO.findByPage(pb); 
-
- // Pagination data...
- ```
-
-
-## EasyCriteria query
-
-1. New your EasyCriteria class, must **extends EasyCriteria implements Serializable**
-
-2. Write your condition by **getCondition()**
-
-3. Find by EasyCriteria
-
-- Example
-
- ```JAVA
- public class SysUserCriteria extends EasyCriteria implements java.io.Serializable {
- 	// 1. Criteria field
- 	private String name;
- 	private String realName;
- 	private Integer status; // 0 is ON; 1 is OFF; 2 is REMOVED
- 
- 	// 2. Constructor
- 	public SysUserCriteria() {
- 	}
- 
- 	public SysUserCriteria(String name, String realName, Integer status) {
- 		super();
- 		this.name = name;
- 		this.realName = realName;
- 		this.status = status;
- 	}
- 
- 	// 3. Condition genertator abstract method implements
- 	public String getCondition() {
- 		values.clear(); // **Must clear old values**
-
- 		StringBuffer condition = new StringBuffer();
- 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
- 			condition.append(" and name like ?");
- 			values.add("%" + this.getName() + "%");
- 		}
- 		if (StringUtils.isNotNullAndEmpty(this.getRealName())) {
- 			condition.append(" and realName like ?");
- 			values.add("%" + this.getRealName() + "%");
- 		}
- 		if (StringUtils.isNotNullAndEmpty(this.getStatus())) {
- 			condition.append(" and status=?");
- 			values.add(this.getStatus());
- 		}
- 		return condition.toString();
- 	}
- 
- 	// 4. Setters&amp;Getters...
- 
- }
- ```
-
-- Usage
-
- ```JAVA
- PageBean pageBean = new PageBean();
- pageBean.setEntityName("SysUser users");
- pageBean.setSelect("select users");
-
- // EasyCriteria
- SysUserCriteria usersCriteria =new SysUserCriteria();
- usersCriteria.setName("A");
- usersCriteria.setStatus(0);
- 
- // Find by EasyCriteria
- commonDAO.findByPage(pageBean, usersCriteria);
- ```
 
 
 

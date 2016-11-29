@@ -7,7 +7,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Latest Version/最新版本 
 
-- Least version:  `EasyCommonDAO-1.2.0-RELEASE`
+- Least version:  `EasyCommonDAO-1.4.0-RELEASE`
 
 - Test enviroment: 
 
@@ -16,7 +16,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
  Hibernate 4.3.11(JPA 2.1)
  Hibernate 3.6.10(JPA 2.0)
  EclipseLink 2.6.4(JPA 2.0+)
- spring 4.3.3
+ Spring 4.3.3
  ```
 
 ## Featuter/特点
@@ -60,21 +60,21 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Technical comparison/技术比较
 
-相较于 `Spring Data JPA` ，EasyCommonDAO 无需定义 DAO 接口，也无需学习方法命名解析规范。降低学习成本，并真正的消除 DAO 层实现。
+相较于 `普通的 DAO实现` 和 `Spring Data JPA` ，`EasyCommonDAO` 既无需定义 DAO 接口，也无需学习方法命名解析规范。降低学习成本，并真正的消除 DAO 层实现。
 
-Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO interface, nor does it need to learn method naming conventions. Reduce learning costs, and truly eliminate the DAO layer to achieve.
-
-- **Basic DAO**
-
- ![Basic DAO](doc/images/BasicDAO.png)
-
-- **Spring Data JPA**
-
- ![Spring Data JPA](doc/images/SpringDataJPA.png)
+Compared to `Basic DAO` and `Spring Data JPA`, `EasyCommonDAO` does not need to define a DAO interface, nor does it need to learn method naming conventions. Reduce the cost of learning, and truly eliminate the DAO layer to achieve.
 
 - **EasyCommonDAO**
 
  ![EasyCommonDAO](doc/images/EasyCommonDAO.png)
+
+- **Spring Data JPA**
+
+ ![Spring Data JPA](doc/images/SpringDataJPA.png)
+ 
+- **Basic DAO**
+
+ ![Basic DAO](doc/images/BasicDAO.png)
 
 
 
@@ -84,7 +84,7 @@ Compared to `Spring Data JPA`, Easy CommonDAO does not need to define a DAO inte
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.2.0-RELEASE</version>
+    <version>1.4.0-RELEASE</version>
 </dependency> 
 ```
 
