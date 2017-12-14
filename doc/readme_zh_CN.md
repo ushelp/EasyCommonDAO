@@ -4,16 +4,16 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 ## 版本 
 
-- Least version:  `EasyCommonDAO-1.4.0-RELEASE`
+- Least version:  `1.5.0-RELEASE`
 
 - Test enviroment: 
 
  ```
- Hibernate 5.2.4(JPA 2.1)
+ Hibernate 5.1.10(JPA 2.1)
  Hibernate 4.3.11(JPA 2.1)
  Hibernate 3.6.10(JPA 2.0)
  EclipseLink 2.6.4(JPA 2.0+)
- Spring 4.3.3
+ Spring 4.3.13
  ```
 
 ## 特点
@@ -61,15 +61,8 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 ## Maven
 
-```XML
-<dependency>
-    <groupId>cn.easyproject</groupId>
-    <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.4.0-RELEASE</version>
-</dependency> 
-```
 
-**选择一个 EasyCommonDAO.artifactId**
+**选择一个 EasyCommonDAO `artifactId`**
 
 - Hibernate Native API
 
@@ -92,6 +85,15 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
  
  `easycommondao-jpa-eclipselink`
  ```
+ 
+ 
+```XML
+<dependency>
+    <groupId>cn.easyproject</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>1.5.0-RELEASE</version>
+</dependency> 
+```
 
 ## 纯 ORM 使用
 
@@ -228,48 +230,97 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 2. 编写条件方法 `getCondition()`
 
- ```JAVA
- public class SysUserCriteria extends EasyCriteria implements java.io.Serializable {
- 	// 1. Criteria field
- 	private String name;
- 	private String realName;
- 	private Integer status; // 0 is ON; 1 is OFF; 2 is REMOVED
- 
- 	// 2. Constructor
- 	public SysUserCriteria() {
- 	}
- 
- 	public SysUserCriteria(String name, String realName, Integer status) {
- 		super();
- 		this.name = name;
- 		this.realName = realName;
- 		this.status = status;
- 	}
- 
- 	// 3. Condition genertator abstract method implements
- 	public String getCondition() {
- 		values.clear(); // **Must clear old values**
-
- 		StringBuffer condition = new StringBuffer();
- 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
- 			condition.append(" and name like ?");
- 			values.add("%" + this.getName() + "%");
- 		}
- 		if (StringUtils.isNotNullAndEmpty(this.getRealName())) {
- 			condition.append(" and realName like ?");
- 			values.add("%" + this.getRealName() + "%");
- 		}
- 		if (StringUtils.isNotNullAndEmpty(this.getStatus())) {
- 			condition.append(" and status=?");
- 			values.add(this.getStatus());
- 		}
- 		return condition.toString();
- 	}
- 
- 	// 4. Setters&amp;Getters...
- 
- }
- ```
+	- 非 JPA 项目，使用 `?` 索引查询参数
+	
+	 ```JAVA
+	 public class SysUserCriteria extends EasyCriteria implements java.io.Serializable {
+	 	// 1. Criteria field
+	 	private String name;
+	 	private String realName;
+	 	private Integer status; // 0 is ON; 1 is OFF; 2 is REMOVED
+	 
+	 	// 2. Constructor
+	 	public SysUserCriteria() {
+	 	}
+	 
+	 	public SysUserCriteria(String name, String realName, Integer status) {
+	 		super();
+	 		this.name = name;
+	 		this.realName = realName;
+	 		this.status = status;
+	 	}
+	 
+	 	// 3. Condition genertator abstract method implements
+	 	public String getCondition() {
+	 		values.clear(); // **Must clear old values**
+	
+	 		StringBuffer condition = new StringBuffer();
+	 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
+	 			// Use ? index query parameters
+	 			condition.append(" and name like ?");
+	 			values.add("%" + this.getName() + "%");
+	 		}
+	 		if (StringUtils.isNotNullAndEmpty(this.getRealName())) {
+	 			condition.append(" and realName like ?");
+	 			values.add("%" + this.getRealName() + "%");
+	 		}
+	 		if (StringUtils.isNotNullAndEmpty(this.getStatus())) {
+	 			condition.append(" and status=?");
+	 			values.add(this.getStatus());
+	 		}
+	 		return condition.toString();
+	 	}
+	 
+	 	// 4. Setters&amp;Getters...
+	 
+	 }
+	 ```
+	
+	- JPA 项目，使用 `:Named` 命名查询参数
+	> JAP 2.1 已经不支持 ? 索引参数 
+	
+	 ```JAVA
+	  public class SysUserCriteria extends EasyCriteria implements java.io.Serializable {
+	 	// 1. 添加条件属性
+	 	private String name;
+	 	private String realName;
+	 	private Integer status; // 用户状态：0启用；1禁用；2删除
+	 
+	 	// 2. 生成构造方法
+	 	public SysUserCriteria() {
+	 	}
+	 
+	 	public SysUserCriteria(String name, String realName, Integer status) {
+	 		super();
+	 		this.name = name;
+	 		this.realName = realName;
+	 		this.status = status;
+	 	}
+	 
+	 	// 3. 条件生成抽象方法实现
+	 	public String getCondition() {
+			values.clear(); //清除条件数据
+	 		StringBuffer condition = new StringBuffer();
+	 		if (StringUtils.isNotNullAndEmpty(this.getName())) {
+	 			// Use :NAME named query parameters
+	 			condition.append(" and name like :name");
+	 			values.put("name", "%" + this.getName() + "%");
+	 		}
+	 		if (StringUtils.isNotNullAndEmpty(this.getRealName())) {
+	 			condition.append(" and realName like :realName");
+	 			values.put("realName", "%" + this.getRealName() + "%");
+	 		}
+	 		if (StringUtils.isNotNullAndEmpty(this.getStatus())) {
+	 			condition.append(" and status=:status");
+	 			values.add("status", this.getStatus());
+	 		}
+	 		return condition.toString();
+	 	}
+	 
+	 	// 4. Setters&Getters...
+	 
+	 }
+	 ```	
 
 3. 通过 EasyCriteria 进行分页查询
 

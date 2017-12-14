@@ -7,16 +7,16 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Latest Version/最新版本 
 
-- Least version:  `EasyCommonDAO-1.4.0-RELEASE`
+- Least version:  `1.5.0-RELEASE`
 
 - Test enviroment: 
 
  ```
- Hibernate 5.2.4(JPA 2.1)
+ Hibernate 5.1.10(JPA 2.1)
  Hibernate 4.3.11(JPA 2.1)
  Hibernate 3.6.10(JPA 2.0)
  EclipseLink 2.6.4(JPA 2.0+)
- Spring 4.3.3
+ Spring 4.3.13
  ```
 
 ## Featuter/特点
@@ -80,16 +80,7 @@ Compared to `Basic DAO` and `Spring Data JPA`, `EasyCommonDAO` does not need to 
 
 ## Maven
 
-```XML
-<dependency>
-    <groupId>cn.easyproject</groupId>
-    <artifactId>${EasyCommonDAO.artifactId}</artifactId>
-    <version>1.4.0-RELEASE</version>
-</dependency> 
-```
-
-
-**Choice one EasyCommonDAO.artifactId**
+**Choice one EasyCommonDAO `artifactId`**
 
 - Hibernate Native API
 
@@ -113,6 +104,14 @@ Compared to `Basic DAO` and `Spring Data JPA`, `EasyCommonDAO` does not need to 
  `easycommondao-jpa-eclipselink`
  ```
 
+
+```XML
+<dependency>
+    <groupId>cn.easyproject</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>1.5.0-RELEASE</version>
+</dependency> 
+```
 
 
 ## Document/文档

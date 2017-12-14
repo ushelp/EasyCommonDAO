@@ -1,0 +1,1313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>R:\Cloud\360Cloud\Easy Project\EasyProject\项目\EasyCommonDAO\easycommondao\github\doc\.readme_zh_CN.md.html</title>
+
+
+<style type="text/css">
+body {
+	color: #333;
+	font: 13px/1.4 "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	background: transparent;
+	color: #4183c4;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	outline: 0 none;
+	text-decoration: underline;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0 none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace,monospace;
+	font-size: 1em;
+}
+
+pre {
+	overflow: auto;
+	font: 12px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.markdown-body {
+	padding: 30px;
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body .absent {
+	color: #c00;
+}
+
+.markdown-body .anchor {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding-right: 6px;
+	padding-left: 30px;
+	margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 16px;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	display: none;
+	color: #000;
+	vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	padding-left: 8px;
+	margin-left: -30px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	display: inline-block;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+	font-size: inherit;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2.25em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.75em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+	font-size: 1.5em;
+	line-height: 1.43;
+}
+
+.markdown-body h4 {
+	font-size: 1.25em;
+}
+
+.markdown-body h5 {
+	font-size: 1em;
+}
+
+.markdown-body h6 {
+	font-size: 1em;
+	color: #777;
+}
+
+.markdown-body p,.markdown-body blockquote,
+.markdown-body ul,.markdown-body ol,
+.markdown-body dl,.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 4px;
+	padding: 0;
+	margin: 16px 0;
+	background-color: #e7e7e7;
+	border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+}
+
+.markdown-body table th {
+	font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.markdown-body span.frame {
+	display: block;
+	overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+	display: block;
+	float: left;
+	width: auto;
+	padding: 7px;
+	margin: 13px 0 0;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+.markdown-body span.frame span img {
+	display: block;
+	float: left;
+}
+
+.markdown-body span.frame span span {
+	display: block;
+	padding: 5px 0 0;
+	clear: both;
+	color: #333;
+}
+
+.markdown-body span.align-center {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-center>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.markdown-body span.align-center span img {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.markdown-body span.align-right {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-right>span {
+	display: block;
+	margin: 13px 0 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body span.align-right span img {
+	margin: 0;
+	text-align: right;
+}
+
+.markdown-body span.float-left {
+	display: block;
+	float: left;
+	margin-right: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+	margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+	display: block;
+	float: right;
+	margin-left: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body code,.markdown-body tt {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after,
+.markdown-body tt:before,
+.markdown-body tt:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+	display: none;
+}
+
+.markdown-body del code {
+	text-decoration: inherit;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+	display: inline;
+	max-width: initial;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after,
+.markdown-body pre tt:before,
+.markdown-body pre tt:after {
+	content: normal;
+}
+
+.highlight .pl-coc,
+.highlight .pl-entl,
+.highlight .pl-entm,
+.highlight .pl-eoa,
+.highlight .pl-mai .pl-sf,
+.highlight .pl-mm,
+.highlight .pl-pdv,
+.highlight .pl-sc,
+.highlight .pl-som,
+.highlight .pl-sr,
+.highlight .pl-v,
+.highlight .pl-vpf {
+	color: #0086b3;
+}
+.highlight .pl-eoac,
+.highlight .pl-mdht,
+.highlight .pl-mi1,
+.highlight .pl-mri,
+.highlight .pl-va,
+.highlight .pl-vpu {
+	color: #008080;
+}
+.highlight .pl-c,
+.highlight .pl-pdc {
+	color: #b4b7b4;
+	font-style: italic;
+}
+.highlight .pl-k,
+.highlight .pl-ko,
+.highlight .pl-kolp,
+.highlight .pl-mc,
+.highlight .pl-mr,
+.highlight .pl-ms,
+.highlight .pl-s,
+.highlight .pl-sok,
+.highlight .pl-st {
+	color: #6e5494;
+}
+.highlight .pl-ef,
+.highlight .pl-enf,
+.highlight .pl-enm,
+.highlight .pl-entc,
+.highlight .pl-eoi,
+.highlight .pl-sf,
+.highlight .pl-smc {
+	color: #d12089;
+}
+.highlight .pl-ens,
+.highlight .pl-eoai,
+.highlight .pl-kos,
+.highlight .pl-mh .pl-pdh,
+.highlight .pl-mp,
+.highlight .pl-pde,
+.highlight .pl-stp {
+	color: #458;
+}
+.highlight .pl-enti {
+	color: #d12089;
+	font-weight: bold;
+}
+.highlight .pl-cce,
+.highlight .pl-enc,
+.highlight .pl-kou,
+.highlight .pl-mq {
+	color: #f93;
+}
+.highlight .pl-mp1 .pl-sf {
+	color: #458;
+	font-weight: bold;
+}
+.highlight .pl-cos,
+.highlight .pl-ent,
+.highlight .pl-md,
+.highlight .pl-mdhf,
+.highlight .pl-ml,
+.highlight .pl-pdc1,
+.highlight .pl-pds,
+.highlight .pl-s1,
+.highlight .pl-scp,
+.highlight .pl-sol {
+	color: #df5000;
+}
+.highlight .pl-c1,
+.highlight .pl-cn,
+.highlight .pl-pse,
+.highlight .pl-pse .pl-s2,
+.highlight .pl-vi {
+	color: #a31515;
+}
+.highlight .pl-mb,
+.highlight .pl-pdb {
+	color: #df5000;
+	font-weight: bold;
+}
+.highlight .pl-mi,
+.highlight .pl-pdi {
+	color: #6e5494;
+	font-style: italic;
+}
+.highlight .pl-ms1 {
+	background-color: #f5f5f5;
+}
+.highlight .pl-mdh,
+.highlight .pl-mdi {
+	font-weight: bold;
+}
+.highlight .pl-mdr {
+	color: #0086b3;
+	font-weight: bold;
+}
+.highlight .pl-s2 {
+	color: #333;
+}
+.highlight .pl-ii {
+	background-color: #df5000;
+	color: #fff;
+}
+.highlight .pl-ib {
+	background-color: #f93;
+}
+.highlight .pl-id {
+	background-color: #a31515;
+	color: #fff;
+}
+.highlight .pl-iu {
+	background-color: #b4b7b4;
+}
+.highlight .pl-mo {
+	color: #969896;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h1> <a id="easycommondao-使用手册" class="anchor" href="#easycommondao-%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EasyCommonDAO 使用手册</h1> 
+<p>EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 <code>DAO（Data Access Object）</code> 支持。旨在于消除 DAO 层接口定义和实现。</p> 
+<h2> <a id="版本" class="anchor" href="#%E7%89%88%E6%9C%AC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>版本</h2> 
+<ul> 
+ <li> <p>Least version: <code>1.5.0-RELEASE</code></p> </li> 
+ <li> <p>Test enviroment:</p> </li> 
+</ul> 
+<pre><code>Hibernate 5.1.10(JPA 2.1)
+Hibernate 4.3.11(JPA 2.1)
+Hibernate 3.6.10(JPA 2.0)
+EclipseLink 2.6.4(JPA 2.0+)
+Spring 4.3.13
+</code></pre> 
+<h2> <a id="特点" class="anchor" href="#%E7%89%B9%E7%82%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>特点</h2> 
+<ol> 
+ <li> <p>提供基于 <strong>Hibernate Native APIs</strong> 和 <strong>Java Persistence API (JPA)</strong> (<code>Hiberante</code>， <code>EclipseLink</code>) 的通用 DAO 实现</p> </li> 
+ <li> <p>消灭 DAO 层接口定义和实现</p> </li> 
+ <li> <p>两项实现选择：<strong>纯 ORM 实现</strong>，<strong>Spring 无缝集成实现</strong></p> </li> 
+ <li> <p>简单易用，学习成本低，Hibernate 和 JPA 使用统一接口规范</p> </li> 
+ <li> <p>提供分页对象（<code>PageBean</code>），条件对象（<code>EasyCriteria</code>）综合查询</p> </li> 
+ <li> <p>提供缓存查询；缓存管理；批量数据处理；级联删除支持...</p> </li> 
+</ol> 
+<h2> <a id="easycommondao-architecture-架构" class="anchor" href="#easycommondao-architecture-%E6%9E%B6%E6%9E%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EasyCommonDAO Architecture 架构</h2> 
+<p><a href="images/Architecture.png" target="_blank"><img src="images/Architecture.png" alt="EasyCommonDAO" style="max-width:100%;" /></a></p> 
+<h2> <a id="technical-comparison技术比较" class="anchor" href="#technical-comparison%E6%8A%80%E6%9C%AF%E6%AF%94%E8%BE%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical comparison/技术比较</h2> 
+<p>相较于 <code>普通的 DAO实现</code> 和 <code>Spring Data JPA</code> ，<code>EasyCommonDAO</code> 既无需定义 DAO 接口，也无需学习方法命名解析规范。降低学习成本，并真正的消除 DAO 层实现。</p> 
+<ul> 
+ <li><strong>EasyCommonDAO</strong></li> 
+</ul> 
+<p><a href="images/EasyCommonDAO.png" target="_blank"><img src="images/EasyCommonDAO.png" alt="EasyCommonDAO" style="max-width:100%;" /></a></p> 
+<ul> 
+ <li><strong>Spring Data JPA</strong></li> 
+</ul> 
+<p><a href="images/SpringDataJPA.png" target="_blank"><img src="images/SpringDataJPA.png" alt="Spring Data JPA" style="max-width:100%;" /></a></p> 
+<ul> 
+ <li><strong>Basic DAO</strong></li> 
+</ul> 
+<p><a href="images/BasicDAO.png" target="_blank"><img src="images/BasicDAO.png" alt="Basic DAO" style="max-width:100%;" /></a></p> 
+<h2> <a id="maven" class="anchor" href="#maven" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Maven</h2> 
+<p><strong>选择一个 EasyCommonDAO <code>artifactId</code></strong></p> 
+<ul> 
+ <li>Hibernate Native API</li> 
+</ul> 
+<pre><code>`easycommondao-hibernate5`
+
+`easycommondao-hibernate4`
+
+`easycommondao-hibernate3`
+</code></pre> 
+<ul> 
+ <li>JPA</li> 
+</ul> 
+<pre><code>`easycommondao-jpa-hibernate5`
+
+`easycommondao-jpa-hibernate4`
+
+`easycommondao-jpa-hibernate3`
+
+`easycommondao-jpa-eclipselink`
+</code></pre> 
+<div class="highlight highlight-text-xml">
+ <pre>&lt;<span class="pl-ent">dependency</span>&gt;
+    &lt;<span class="pl-ent">groupId</span>&gt;cn.easyproject&lt;/<span class="pl-ent">groupId</span>&gt;
+    &lt;<span class="pl-ent">artifactId</span>&gt;${artifactId}&lt;/<span class="pl-ent">artifactId</span>&gt;
+    &lt;<span class="pl-ent">version</span>&gt;1.5.0-RELEASE&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt; </pre>
+</div> 
+<h2> <a id="纯-orm-使用" class="anchor" href="#%E7%BA%AF-orm-%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>纯 ORM 使用</h2> 
+<ol> 
+ <li>配置框架</li> 
+</ol> 
+<ul> 
+ <li> <p>配置 Hibernate3/4/5: <code>hibernate.cfg.xml</code></p> </li> 
+ <li> <p>配置 JPA(<code>Hibernate3/4/5</code>, <code>EclipseLink</code>): <code>persistence.xml</code>，指定 <code>name=&quot;EasyCommonDAO&quot;</code></p> 
+  <div class="highlight highlight-text-xml">
+   <pre>&lt;<span class="pl-ent">persistence-unit</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>EasyCommonDAO<span class="pl-pds">&quot;</span></span> <span class="pl-e">transaction-type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>RESOURCE_LOCAL<span class="pl-pds">&quot;</span></span>&gt;</pre>
+  </div> </li> 
+</ul> 
+<ol start="2"> 
+ <li>编写 Service 业务层，创建 CommonDAO，调用 CommonDAO API</li> 
+</ol> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UserServiceImpl</span> <span class="pl-k">implements</span> <span class="pl-e">UserService</span> {
+
+     <span class="pl-c"><span class="pl-c">//</span> EasyCommonDAO instance</span>
+     <span class="pl-k">public</span> <span class="pl-smi">CommonDAO</span> dao<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-smi">CommonDAOImpl</span>();
+     
+     <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">get</span>(<span class="pl-k">int</span> <span class="pl-v">userId</span>){
+         <span class="pl-c"><span class="pl-c">//</span> Invoke ComonDAO API</span>
+         <span class="pl-k">return</span> dao<span class="pl-k">.</span>find(<span class="pl-smi">User</span><span class="pl-k">.</span>class, userId);
+     }
+
+     <span class="pl-c"><span class="pl-c">//</span> ...</span>
+}</pre>
+</div> 
+<h2> <a id="spring-无缝集成-orm-使用" class="anchor" href="#spring-%E6%97%A0%E7%BC%9D%E9%9B%86%E6%88%90-orm-%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Spring 无缝集成 ORM 使用</h2> 
+<ol> 
+ <li>配置 Spring DAO， 一般包括:</li> 
+</ol> 
+<ul> 
+ <li> <p><code>DataSource</code></p> </li> 
+ <li> <p><code>EntityManagerFactory</code>/<code>SessionFactory</code></p> </li> 
+ <li> <p><code>TransactionManager</code></p> </li> 
+</ul> 
+<ol start="3"> 
+ <li>配置 Spring 扫描 <code>cn.easyproject</code> 包</li> 
+</ol> 
+<div class="highlight highlight-text-xml">
+ <pre>&lt;<span class="pl-ent">context</span><span class="pl-ent">:</span><span class="pl-ent">component-scan</span> <span class="pl-e">base-package</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>cn.easyproject<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">context</span><span class="pl-ent">:</span><span class="pl-ent">component-scan</span>&gt;</pre>
+</div> 
+<ol start="2"> 
+ <li>Service 层注入 CommonDAO， <code>@Resource(name=&quot;commonDAO&quot;)</code>，调用 CommonDAO API</li> 
+</ol> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UserServiceImpl</span> <span class="pl-k">implements</span> <span class="pl-e">UserService</span> {
+
+     <span class="pl-c"><span class="pl-c">//</span> Inject EasyCommonDAO instance</span>
+     <span class="pl-k">@Resource</span>(<span class="pl-c1">name</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&quot;</span>commonDAO<span class="pl-pds">&quot;</span></span>)
+     <span class="pl-k">public</span> <span class="pl-smi">CommonDAO</span> dao;
+     
+     <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">get</span>(<span class="pl-k">int</span> <span class="pl-v">userId</span>){
+         <span class="pl-c"><span class="pl-c">//</span> Invoke ComonDAO API</span>
+         <span class="pl-k">return</span> dao<span class="pl-k">.</span>find(<span class="pl-smi">User</span><span class="pl-k">.</span>class, userId);
+     }
+
+     <span class="pl-c"><span class="pl-c">//</span> ...</span>
+}</pre>
+</div> 
+<h2> <a id="pagebean-分页" class="anchor" href="#pagebean-%E5%88%86%E9%A1%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PageBean 分页</h2> 
+<p><strong>EclipseLink</strong> 必须指定 select 语句。</p> 
+<ul> 
+ <li>Example</li> 
+</ul> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-smi">PageBean</span> pb <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">PageBean</span>();
+
+<span class="pl-c"><span class="pl-c">//</span> FROM Clause; optional</span>
+<span class="pl-c"><span class="pl-c">//</span> **If use EclipseLink is required!**</span>
+pb<span class="pl-k">.</span>setSelect(<span class="pl-s"><span class="pl-pds">&quot;</span> select new com.company.ssh.entity.Account(ac.accountid, ac.qxname) <span class="pl-pds">&quot;</span></span>);
+<span class="pl-c"><span class="pl-c">//</span> FROM Clause Entity Name; rquired</span>
+pb<span class="pl-k">.</span>setEntityName(<span class="pl-s"><span class="pl-pds">&quot;</span>Account ac<span class="pl-pds">&quot;</span></span>); 
+<span class="pl-c"><span class="pl-c">//</span> Page Number; optional; default is 1</span>
+pb<span class="pl-k">.</span>setPageNo(<span class="pl-c1">1</span>); 
+<span class="pl-c"><span class="pl-c">//</span> Rows per page; optional; default is 10</span>
+pb<span class="pl-k">.</span>setRowsPerPage(<span class="pl-c1">4</span>);
+<span class="pl-c"><span class="pl-c">//</span> WHERE Clause; optional; default is ''</span>
+pb<span class="pl-k">.</span>setCondition(<span class="pl-s"><span class="pl-pds">&quot;</span> and ac.accountid&gt;2<span class="pl-pds">&quot;</span></span>);
+<span class="pl-c"><span class="pl-c">//</span> Append where clause condition; optional; default is ''</span>
+<span class="pl-c"><span class="pl-c">//</span> pb.addCondition(&quot; and name='A'&quot;);</span>
+<span class="pl-c"><span class="pl-c">//</span> SortName; optional; default is ''</span>
+pb<span class="pl-k">.</span>setSort(<span class="pl-s"><span class="pl-pds">&quot;</span>ac.accountid<span class="pl-pds">&quot;</span></span>);
+<span class="pl-c"><span class="pl-c">//</span> SortOrder; optional; default is 'asc'</span>
+pb<span class="pl-k">.</span>setSortOrder(<span class="pl-s"><span class="pl-pds">&quot;</span>desc<span class="pl-pds">&quot;</span></span>);
+<span class="pl-c"><span class="pl-c">//</span> Other sorting methods; optional; default is ''</span>
+pb<span class="pl-k">.</span>setLastSort(<span class="pl-s"><span class="pl-pds">&quot;</span>,time desc<span class="pl-pds">&quot;</span></span>);
+
+<span class="pl-c"><span class="pl-c">//</span> Execute pagination quries</span>
+commonDAO<span class="pl-k">.</span>findByPage(pb); 
+
+<span class="pl-c"><span class="pl-c">//</span> Pagination data</span>
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getData());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getPageNo());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getRowsPerPage());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getRowsCount());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getPageTotal());</pre>
+</div> 
+<ul> 
+ <li>Example2</li> 
+</ul> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-c"><span class="pl-c">//</span> Immediate use this query</span>
+<span class="pl-c"><span class="pl-c">//</span> data sql</span>
+pb<span class="pl-k">.</span>setQuery(<span class="pl-s"><span class="pl-pds">&quot;</span>select ac from Account ac where ac.accountid&gt;=10 and ac.accountid&lt;1000<span class="pl-pds">&quot;</span></span>);
+<span class="pl-c"><span class="pl-c">//</span> total sql</span>
+pb<span class="pl-k">.</span>setCountSQL(<span class="pl-s"><span class="pl-pds">&quot;</span>select count(1) from Account ac where ac.accountid&gt;=10 and ac.accountid&lt;1000<span class="pl-pds">&quot;</span></span>); 
+ <span class="pl-c"><span class="pl-c">//</span> Page Number; optional; default is 1</span>
+pb<span class="pl-k">.</span>setPageNo(<span class="pl-c1">1</span>); 
+<span class="pl-c"><span class="pl-c">//</span> Rows per page; optional; default is 10</span>
+pb<span class="pl-k">.</span>setRowsPerPage(<span class="pl-c1">4</span>);
+
+<span class="pl-c"><span class="pl-c">//</span> Execute pagination quries</span>
+commonDAO<span class="pl-k">.</span>findByPage(pb); 
+
+<span class="pl-c"><span class="pl-c">//</span> Pagination data</span>
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getData());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getPageNo());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getRowsPerPage());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getRowsCount());
+<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(pb<span class="pl-k">.</span>getPageTotal());</pre>
+</div> 
+<h2> <a id="easycriteria-条件查询" class="anchor" href="#easycriteria-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EasyCriteria 条件查询</h2> 
+<ol> 
+ <li> <p>创建 EasyCriteria 类, 必须 <code>extends EasyCriteria implements Serializable</code></p> </li> 
+ <li> <p>编写条件方法 <code>getCondition()</code></p> 
+  <ul> 
+   <li>非 JPA 项目，使用 <code>?</code> 索引查询参数</li> 
+  </ul> 
+  <div class="highlight highlight-source-java">
+   <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SysUserCriteria</span> <span class="pl-k">extends</span> <span class="pl-e">EasyCriteria</span> <span class="pl-k">implements</span> <span class="pl-e">java.io<span class="pl-k">.</span>Serializable</span> {
+	<span class="pl-c"><span class="pl-c">//</span> 1. Criteria field</span>
+	<span class="pl-k">private</span> <span class="pl-smi">String</span> name;
+	<span class="pl-k">private</span> <span class="pl-smi">String</span> realName;
+	<span class="pl-k">private</span> <span class="pl-smi">Integer</span> status; <span class="pl-c"><span class="pl-c">//</span> 0 is ON; 1 is OFF; 2 is REMOVED</span>
+
+	<span class="pl-c"><span class="pl-c">//</span> 2. Constructor</span>
+	<span class="pl-k">public</span> <span class="pl-en">SysUserCriteria</span>() {
+	}
+
+	<span class="pl-k">public</span> <span class="pl-en">SysUserCriteria</span>(<span class="pl-smi">String</span> <span class="pl-v">name</span>, <span class="pl-smi">String</span> <span class="pl-v">realName</span>, <span class="pl-smi">Integer</span> <span class="pl-v">status</span>) {
+		<span class="pl-c1">super</span>();
+		<span class="pl-c1">this</span><span class="pl-k">.</span>name <span class="pl-k">=</span> name;
+		<span class="pl-c1">this</span><span class="pl-k">.</span>realName <span class="pl-k">=</span> realName;
+		<span class="pl-c1">this</span><span class="pl-k">.</span>status <span class="pl-k">=</span> status;
+	}
+
+	<span class="pl-c"><span class="pl-c">//</span> 3. Condition genertator abstract method implements</span>
+	<span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">getCondition</span>() {
+		values<span class="pl-k">.</span>clear(); <span class="pl-c"><span class="pl-c">//</span> **Must clear old values**</span>
+
+		<span class="pl-smi">StringBuffer</span> condition <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">StringBuffer</span>();
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getName())) {
+			<span class="pl-c"><span class="pl-c">//</span> Use ? index query parameters</span>
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and name like ?<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>add(<span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span><span class="pl-k">.</span>getName() <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span>);
+		}
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getRealName())) {
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and realName like ?<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>add(<span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span><span class="pl-k">.</span>getRealName() <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span>);
+		}
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getStatus())) {
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and status=?<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>add(<span class="pl-c1">this</span><span class="pl-k">.</span>getStatus());
+		}
+		<span class="pl-k">return</span> condition<span class="pl-k">.</span>toString();
+	}
+
+	<span class="pl-c"><span class="pl-c">//</span> 4. Setters&amp;amp;Getters...</span>
+
+}</pre>
+  </div> 
+  <ul> 
+   <li>JPA 项目，使用 <code>:Named</code> 命名查询参数</li> 
+  </ul> 
+  <blockquote> 
+   <p>JAP 2.1 已经不支持 ? 索引参数</p> 
+  </blockquote> 
+  <div class="highlight highlight-source-java">
+   <pre> <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">SysUserCriteria</span> <span class="pl-k">extends</span> <span class="pl-e">EasyCriteria</span> <span class="pl-k">implements</span> <span class="pl-e">java.io<span class="pl-k">.</span>Serializable</span> {
+	<span class="pl-c"><span class="pl-c">//</span> 1. 添加条件属性</span>
+	<span class="pl-k">private</span> <span class="pl-smi">String</span> name;
+	<span class="pl-k">private</span> <span class="pl-smi">String</span> realName;
+	<span class="pl-k">private</span> <span class="pl-smi">Integer</span> status; <span class="pl-c"><span class="pl-c">//</span> 用户状态：0启用；1禁用；2删除</span>
+
+	<span class="pl-c"><span class="pl-c">//</span> 2. 生成构造方法</span>
+	<span class="pl-k">public</span> <span class="pl-en">SysUserCriteria</span>() {
+	}
+
+	<span class="pl-k">public</span> <span class="pl-en">SysUserCriteria</span>(<span class="pl-smi">String</span> <span class="pl-v">name</span>, <span class="pl-smi">String</span> <span class="pl-v">realName</span>, <span class="pl-smi">Integer</span> <span class="pl-v">status</span>) {
+		<span class="pl-c1">super</span>();
+		<span class="pl-c1">this</span><span class="pl-k">.</span>name <span class="pl-k">=</span> name;
+		<span class="pl-c1">this</span><span class="pl-k">.</span>realName <span class="pl-k">=</span> realName;
+		<span class="pl-c1">this</span><span class="pl-k">.</span>status <span class="pl-k">=</span> status;
+	}
+
+	<span class="pl-c"><span class="pl-c">//</span> 3. 条件生成抽象方法实现</span>
+	<span class="pl-k">public</span> <span class="pl-smi">String</span> <span class="pl-en">getCondition</span>() {
+   	values<span class="pl-k">.</span>clear(); <span class="pl-c"><span class="pl-c">//</span>清除条件数据</span>
+		<span class="pl-smi">StringBuffer</span> condition <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">StringBuffer</span>();
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getName())) {
+			<span class="pl-c"><span class="pl-c">//</span> Use :NAME named query parameters</span>
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and name like :name<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>put(<span class="pl-s"><span class="pl-pds">&quot;</span>name<span class="pl-pds">&quot;</span></span>, <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span><span class="pl-k">.</span>getName() <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span>);
+		}
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getRealName())) {
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and realName like :realName<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>put(<span class="pl-s"><span class="pl-pds">&quot;</span>realName<span class="pl-pds">&quot;</span></span>, <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-c1">this</span><span class="pl-k">.</span>getRealName() <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span>%<span class="pl-pds">&quot;</span></span>);
+		}
+		<span class="pl-k">if</span> (<span class="pl-smi">StringUtils</span><span class="pl-k">.</span>isNotNullAndEmpty(<span class="pl-c1">this</span><span class="pl-k">.</span>getStatus())) {
+			condition<span class="pl-k">.</span>append(<span class="pl-s"><span class="pl-pds">&quot;</span> and status=:status<span class="pl-pds">&quot;</span></span>);
+			values<span class="pl-k">.</span>add(<span class="pl-s"><span class="pl-pds">&quot;</span>status<span class="pl-pds">&quot;</span></span>, <span class="pl-c1">this</span><span class="pl-k">.</span>getStatus());
+		}
+		<span class="pl-k">return</span> condition<span class="pl-k">.</span>toString();
+	}
+
+	<span class="pl-c"><span class="pl-c">//</span> 4. Setters&amp;Getters...</span>
+
+}</pre>
+  </div> </li> 
+ <li> <p>通过 EasyCriteria 进行分页查询</p> </li> 
+</ol> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-smi">PageBean</span> pageBean <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">PageBean</span>();
+pageBean<span class="pl-k">.</span>setEntityName(<span class="pl-s"><span class="pl-pds">&quot;</span>SysUser users<span class="pl-pds">&quot;</span></span>);
+pageBean<span class="pl-k">.</span>setSelect(<span class="pl-s"><span class="pl-pds">&quot;</span>select users<span class="pl-pds">&quot;</span></span>);
+
+<span class="pl-c"><span class="pl-c">//</span> EasyCriteria</span>
+<span class="pl-smi">SysUserCriteria</span> usersCriteria <span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-smi">SysUserCriteria</span>();
+usersCriteria<span class="pl-k">.</span>setName(<span class="pl-s"><span class="pl-pds">&quot;</span>A<span class="pl-pds">&quot;</span></span>);
+usersCriteria<span class="pl-k">.</span>setStatus(<span class="pl-c1">0</span>);
+
+<span class="pl-c"><span class="pl-c">//</span> Find by EasyCriteria</span>
+commonDAO<span class="pl-k">.</span>findByPage(pageBean, usersCriteria);</pre>
+</div> 
+<h2> <a id="commondao-api" class="anchor" href="#commondao-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CommonDAO API</h2> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 使用JDBC执行原生的批量SQL，单参数语句值列表</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param values 单参数语句值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> batchUpdateSQL(<span class="pl-smi">String</span> sql, <span class="pl-k">Object</span>[] values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 使用JDBC执行原生的批量SQL，多参数语句值列表</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param values 多参数语句值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> batchUpdateSQL(<span class="pl-smi">String</span> sql, <span class="pl-k">Object</span>[][] values);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 删除持久对象</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * @param cls 类型</span>
+<span class="pl-c"> * @param id OID</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> remove(<span class="pl-smi">Class</span> cls, <span class="pl-smi">Serializable</span> id);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 删除持久对象</span>
+<span class="pl-c"> * </span>
+<span class="pl-c"> * @param o 实体对象</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> remove(<span class="pl-smi">Object</span> o);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 使用 Query 语句批量删除，不支持级联</span>
+<span class="pl-c"> * @param cls 类型ls 类型</span>
+<span class="pl-c"> * @param fieldName 删除条件字段</span>
+<span class="pl-c"> * @param values 语句参数值列表List 要删除的字段列表，使用,分隔</span>
+<span class="pl-c"> * @return affected rows count</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">Integer</span> deleteByValues(<span class="pl-smi">Class</span> cls, <span class="pl-smi">String</span> fieldName, <span class="pl-k">Object</span>[] values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 使用 Query 语句批量删除，支持级联</span>
+<span class="pl-c"> * @param cls 类型</span>
+<span class="pl-c"> * @param fieldName 删除条件字段</span>
+<span class="pl-c"> * @param values 集合值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> deleteCascadeByValues(<span class="pl-smi">Class</span> cls, <span class="pl-smi">String</span> fieldName, <span class="pl-k">Object</span>[] values);
+ 
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除二级缓存中所有的c对象</span>
+<span class="pl-c"> * @param cls 类型</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evict(<span class="pl-smi">Class</span> cls);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除二级缓存中OID为id的c对象</span>
+<span class="pl-c"> * @param cls 类型</span>
+<span class="pl-c"> * @param id OID</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evict(<span class="pl-smi">Class</span> cls,<span class="pl-smi">Serializable</span> id);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除二级缓存中所有对象</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evictAll();
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除二级缓存中指定类的集合属性</span>
+<span class="pl-c"> * @param collectionRegion 查询缓存区域</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evictCollectionRegion(<span class="pl-smi">String</span> collectionRegion);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除二级缓存中指定id类的集合属性</span>
+<span class="pl-c"> * @param collectionRegion 查询缓存区域</span>
+<span class="pl-c"> * @param id OID</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evictCollectionRegion(<span class="pl-smi">String</span> collectionRegion,<span class="pl-smi">Serializable</span> id);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除默认区域的查询缓存策略，如果默认为空，则清除所有标准区域查询缓存策略</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evictQueries();
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 清除指定区域策略的查询缓存</span>
+<span class="pl-c"> * @param queryCacheRegion 指定查询缓存区域</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> evictQueries(<span class="pl-smi">String</span> queryCacheRegion);
+
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 通过Id查询</span>
+<span class="pl-c"> * @param cls 类型</span>
+<span class="pl-c"> * @param id OID</span>
+<span class="pl-c"> * @return Object</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">&lt;</span><span class="pl-smi">T</span><span class="pl-k">&gt;</span> <span class="pl-smi">T</span> find(<span class="pl-smi">Class</span> cls, <span class="pl-smi">Serializable</span> id);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 按条件根据jpql查询</span>
+<span class="pl-c"> * @param jpql jpql语句 jpql</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> find(<span class="pl-smi">String</span> jpql,<span class="pl-smi">EasyCriteria</span> easyCriteria);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 根据jpql查询</span>
+<span class="pl-c"> * @param jpql jpql语句 jpql</span>
+<span class="pl-c"> * @param values 语句参数值列表 参数列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> find(<span class="pl-smi">String</span> jpql, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询所有</span>
+<span class="pl-c"> * @param cls 类型ls</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findAll(<span class="pl-smi">Class</span> cls);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 带查询缓存查询，</span>
+<span class="pl-c"> * 查询缓存，使用DEFAULT_QUERY_CACHE_REGION指定区域的缓存，如DEFAULT_QUERY_CACHE_REGION==null或==&quot;&quot;,则使用默认标准区域缓存策略</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByCache(<span class="pl-smi">String</span> jpql, <span class="pl-smi">EasyCriteria</span> easyCriteria);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 带查询缓存查询，</span>
+<span class="pl-c"> * 查询缓存，使用DEFAULT_QUERY_CACHE_REGION指定区域的缓存，如DEFAULT_QUERY_CACHE_REGION==null或==&quot;&quot;,则使用默认标准区域缓存策略</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByCache(<span class="pl-smi">String</span> jpql, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询缓存,需要指定具体的缓存策略区域</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param queryCacheRegion 指定查询缓存区域</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByCache(<span class="pl-smi">String</span> jpql, <span class="pl-smi">String</span> queryCacheRegion, <span class="pl-smi">EasyCriteria</span> easyCriteria);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询缓存,需要指定具体的缓存策略区域</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param queryCacheRegion 指定查询缓存区域</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByCache(<span class="pl-smi">String</span> jpql, <span class="pl-smi">String</span> queryCacheRegion, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 分页查询</span>
+<span class="pl-c"> * @param pageBean pageBean</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> findByPage(<span class="pl-smi">PageBean</span> pageBean);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 分页查询</span>
+<span class="pl-c"> * @param pageBean pageBean</span>
+<span class="pl-c"> * @param easyCriteria 按条件分页查询方法</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> findByPage(<span class="pl-smi">PageBean</span> pageBean,<span class="pl-smi">EasyCriteria</span> easyCriteria);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 分页查询</span>
+<span class="pl-c"> * @param pageBean pageBean</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> findByPage(<span class="pl-smi">PageBean</span> pageBean,<span class="pl-smi">List</span> values);  
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 简单查询，按照字段查询</span>
+<span class="pl-c"> * @param cls 类型ls</span>
+<span class="pl-c"> * @param propertyName 属性名</span>
+<span class="pl-c"> * @param value 属性值</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByProperty(<span class="pl-smi">Class</span> cls, <span class="pl-smi">String</span> propertyName, <span class="pl-smi">Object</span> value);  
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 按照字段查询，不区分大小写</span>
+<span class="pl-c"> * @param cls 类型ls</span>
+<span class="pl-c"> * @param propertyName 属性名</span>
+<span class="pl-c"> * @param value 属性值</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findByPropertyIgnoreCase(<span class="pl-smi">Class</span> cls, <span class="pl-smi">String</span> propertyName, <span class="pl-smi">String</span> value);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的 Map 对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param resultClass 类型 封装的类型</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 查询的结果封装为transformers指定的类型</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+
+
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findBySQL(<span class="pl-smi">String</span> sql, <span class="pl-smi">Class</span> resultClass, <span class="pl-smi">EasyCriteria</span> easyCriteria);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param resultClass 类型 封装的类型</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return 查询的结果封装为c指定的实体</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findBySQL(<span class="pl-smi">String</span> sql, <span class="pl-smi">Class</span> resultClass, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 查询的结果，多列时转换为Object[]</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findBySQL(<span class="pl-smi">String</span> sql,<span class="pl-smi">EasyCriteria</span> easyCriteria);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return 查询的结果，多列时转换为Object[]</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findBySQL(<span class="pl-smi">String</span> sql,<span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 通过jpql语句查询总条数</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 总条数</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">int</span> findCount(<span class="pl-smi">String</span> jpql, <span class="pl-smi">EasyCriteria</span> easyCriteria);  
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 通过jpql语句查询总条数</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return 总条数</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">int</span> findCount(<span class="pl-smi">String</span> jpql, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);  
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的 Map 对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 查询的结果封装为transformers指定的类型</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findMapResultBySQL(<span class="pl-smi">String</span> sql,<span class="pl-smi">EasyCriteria</span> easyCriteria);  
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行Native SQL，返回封装的 Map 对象集合</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return 查询的结果封装为transformers指定的类型</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findMapResultBySQL(<span class="pl-smi">String</span> sql, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);  
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询数据条数，并根据每页条数计算总页数</span>
+<span class="pl-c"> * @param jpql 查询条数的语句</span>
+<span class="pl-c"> * @param rowsPerPage 每页显示条数</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 总页数</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">int</span> findMaxPage(<span class="pl-smi">String</span> jpql, <span class="pl-k">int</span> rowsPerPage, <span class="pl-smi">EasyCriteria</span> easyCriteria);  
+ 
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询数据条数，并根据每页条数计算总页数</span>
+<span class="pl-c"> * @param jpql 查询条数的语句</span>
+<span class="pl-c"> * @param rowsPerPage 每页显示条数</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return 总页数</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">int</span> findMaxPage(<span class="pl-smi">String</span> jpql, <span class="pl-k">int</span> rowsPerPage, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);  
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行命名查询</span>
+<span class="pl-c"> * @param name queryName</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findNamedQuery(<span class="pl-smi">String</span> name, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values) ; 
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 执行命名查询</span>
+<span class="pl-c"> * @param name queryName</span>
+<span class="pl-c"> * @param queryCacheRegion 指定查询缓存区域</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findNamedQueryByCache(<span class="pl-smi">String</span> name, <span class="pl-smi">String</span> queryCacheRegion, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values) ;
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询前topCount条数据</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param topCount count</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findTop(<span class="pl-smi">String</span> jpql,<span class="pl-k">int</span> topCount,  <span class="pl-smi">EasyCriteria</span> easyCriteria);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询前topCount条数据</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param topCount count</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> * @return List</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">List</span> findTop(<span class="pl-smi">String</span> jpql,<span class="pl-k">int</span> topCount, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values); 
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询单个（单行单列）数据，如最大值，最小值等等</span>
+<span class="pl-c"> * @param jpql 单个数据查询语句</span>
+<span class="pl-c"> * @param easyCriteria EasyCriteria条件对象 </span>
+<span class="pl-c"> * @return 查询到的单个值</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">&lt;</span><span class="pl-smi">T</span><span class="pl-k">&gt;</span> <span class="pl-smi">T</span> findVal(<span class="pl-smi">String</span> jpql,  <span class="pl-smi">EasyCriteria</span> easyCriteria);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 查询单个（单行单列）数据，如最大值，最小值等等</span>
+<span class="pl-c"> * @param jpql 单个数据查询语句</span>
+<span class="pl-c"> * @param values 语句占位符对应的值</span>
+<span class="pl-c"> * @return 查询到的单个值</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">&lt;</span><span class="pl-smi">T</span><span class="pl-k">&gt;</span> <span class="pl-smi">T</span> findVal(<span class="pl-smi">String</span> jpql, <span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 获取EntityManager</span>
+<span class="pl-c"> * @return EntityManager</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">EntityManager</span> getCurrentEntityManager();
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 获取EntityManagerFactory，主要用来手动清除缓存</span>
+<span class="pl-c"> * @return EntityManagerFactory</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-smi">EntityManagerFactory</span> getEntityManagerFactory();
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 初始化关联的对象</span>
+<span class="pl-c"> * @param proxy 对象</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> initialize(<span class="pl-smi">Object</span> proxy) ;
+
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 将集合中的对象深度初始化</span>
+<span class="pl-c"> * @param collection Collection</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> initializeDeep(<span class="pl-smi">Collection</span> collection);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 修改对象</span>
+<span class="pl-c"> * @param o 实体对象</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> merge(<span class="pl-smi">Object</span> o);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 新增</span>
+<span class="pl-c"> * @param o 实体对象</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> persist(<span class="pl-smi">Object</span> o); 
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 通过jpql语句进行批量修改（更新，删除）</span>
+<span class="pl-c"> * @param jpql jpql语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> updateByJpql(<span class="pl-smi">String</span> jpql,<span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">..</span> values);
+<span class="pl-c"><span class="pl-c">/*</span>*</span>
+<span class="pl-c"> * 使用JDBC执行原生的增删改SQL语句</span>
+<span class="pl-c"> * @param sql SQL语句</span>
+<span class="pl-c"> * @param values 语句参数值列表</span>
+<span class="pl-c"> <span class="pl-c">*/</span></span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> updateBySQL(<span class="pl-smi">String</span> sql,<span class="pl-smi">Object</span><span class="pl-k">.</span><span class="pl-c1">.</span><span class="pl-k">.</span>values);</pre>
+</div> 
+<h2> <a id="end" class="anchor" href="#end" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>End</h2> 
+<p><a href="http://www.easyproject.cn/easycommondao/zh-cn/index.jsp#demo" title="Demo - 中文]" rel="nofollow">Demo - 中文</a></p> 
+<p><a href="http://www.easyproject.cn/easycommondao/zh-cn/index.jsp" title="官方主页" rel="nofollow">官方主页</a></p> 
+<p><a href="http://www.easyproject.cn/easycommondao/zh-cn/index.jsp#donation" title="留言评论" rel="nofollow">留言评论</a></p> 
+<p>如果您有更好意见，建议或想法，请联系我。</p> 
+<p>联系、反馈、定制 Email：<a href="mailto:inthinkcolor@gmail.com">inthinkcolor@gmail.com</a></p> 
+<p><a href="http://www.easyproject.cn" title="EasyProject Home" rel="nofollow">http://www.easyproject.cn</a></p> 
+<p><strong>支付宝钱包扫一扫捐助：</strong></p> 
+<p>我们相信，每个人的点滴贡献，都将是推动产生更多、更好免费开源产品的一大步。</p> 
+<p><strong>感谢慷慨捐助，以支持服务器运行和鼓励更多社区成员。</strong></p> 
+<p><a href="https://camo.githubusercontent.com/0079923bf4bc9ed15a8be36a117559592e024d1b/687474703a2f2f7777772e6561737970726f6a6563742e636e2f696d616765732f732e706e67" target="_blank" rel="nofollow"><img alt="支付宝钱包扫一扫捐助" src="https://camo.githubusercontent.com/0079923bf4bc9ed15a8be36a117559592e024d1b/687474703a2f2f7777772e6561737970726f6a6563742e636e2f696d616765732f732e706e67" title="支付宝钱包扫一扫捐助" height="256" width="256" data-canonical-src="http://www.easyproject.cn/images/s.png" style="max-width:100%;" /></a></p>
+</body>
+</html>
