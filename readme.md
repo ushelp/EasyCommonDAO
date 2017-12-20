@@ -7,7 +7,7 @@ EasyCommonDAO is a Java ORM Common `DAO(Data Access Object)` implementation, can
 
 ## Latest Version/最新版本 
 
-- Least version:  `1.5.0-RELEASE`
+- Least version:  `1.5.1-RELEASE`
 
 - Test enviroment: 
 
@@ -109,7 +109,7 @@ Compared to `Basic DAO` and `Spring Data JPA`, `EasyCommonDAO` does not need to 
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>1.5.0-RELEASE</version>
+    <version>1.5.1-RELEASE</version>
 </dependency> 
 ```
 

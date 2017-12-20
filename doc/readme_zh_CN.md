@@ -4,7 +4,7 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 
 ## 版本 
 
-- Least version:  `1.5.0-RELEASE`
+- Least version:  `1.5.1-RELEASE`
 
 - Test enviroment: 
 
@@ -91,7 +91,7 @@ EasyCommonDAO 为 Java ORM 主流持久层技术提供通用的 `DAO（Data Acce
 <dependency>
     <groupId>cn.easyproject</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>1.5.0-RELEASE</version>
+    <version>1.5.1-RELEASE</version>
 </dependency> 
 ```
 
